@@ -13,5 +13,4 @@ document.getElementById('show-history-btn').addEventListener('click', function()
 })
 
  // Transaction History
- const transactionMessage = `${addMoney} Taka is Donated for Flood Relief in Feni,Bangladesh`;
- transactionHistory(transactionMessage);
+ 

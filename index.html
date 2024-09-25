@@ -21,34 +21,38 @@
     </style> 
 </head>
 <body class="lexend-font">
-    <header class="bg-orange-50">
+    <header>
         <!-- Navbar Start -->
-        <nav class="container mx-auto flex justify-between py-3 items-center">
-          <div><button class="btn bg-lime-400 text-xl">Blog</button></div>
+        <nav class="fixed top-0 w-full z-10 bg-orange-50 p-4 shadow-md">
+         <div class="container mx-auto flex justify-between items-center">
+          <div>
+            <a class="text-xl font-semibold bg-lime-400 px-3 py-2 rounded-lg" href="blog.html">Blog</a>
+          </div>
           <div>
             <ul class="flex items-center">
                 <li ><img class="mr-2" src="assets/logo.png"></li>
-                <li class="mb-1 text-xl font-bold">Donate Bangladesh</li>
+                <li class="mb-1 text-xl font-bold">Donation for Bangladesh</li>
                </ul>
             </div>
             <div class="flex">
                 <img class="mr-2" src="assets/coin.png">
-                <span>5500 BDT</span>
+                <span id="main-balance" class="font-semibold">5500 BDT</span>
             </div>
+         </div>
         </nav>
         <!-- Navbar End -->
-</header>
+   </header>
 <main class="container mx-auto">
-     <!-- Banner Section Start -->
-     <div class="text-center mt-20 space-x-1">
-        <button class="bg-lime-400 p-3 rounded-lg font-semibold">Donation</button>
-        <button class="btn border-neutral-500">History</button>
+<!-- Banner Section -->
+  
+    <div class="mt-32 text-center">
+      <button id="show-donation-btn" class="bg-lime-400 w-24 py-3 px-2 font-semibold rounded-lg mr-4">Donation</button>
+      <button id="show-history-btn" class="border-solid border-2 border-gray-200 w-24 py-3 px-2 font-semibold rounded-lg ml-4">History</button>
     </div>
-    <!-- Banner Section End -->
 
-     <!-- Section One -->
-     <section class="max-w-7xl mx-auto p-6">
-      <div class=" bg-white rounded-lg border mb-8 p-4 flex flex-col md:flex-row items-center md:items-start">
+    <!-- Section Noakhali -->
+<section id="add-money-noakhali" class="max-w-7xl mx-auto p-6">
+<div class=" bg-white rounded-lg border mb-8 p-4 flex flex-col md:flex-row items-center md:items-start">
         <!-- Image Section -->
           <div class="w-full md:w-1/2">
             <img src="assets/noakhali.png" alt="Flood" class="w-full h-full object-cover rounded-lg">
@@ -89,10 +93,9 @@
   </div>
  </div>
 </section>
-     <!-- Section Two -->
-   
-    <section class="max-w-7xl mx-auto p-6">
-      <div class=" bg-white rounded-lg border mb-8 p-4 flex flex-col md:flex-row items-center md:items-start">
+     <!-- Section Feni -->
+<section id="add-money-feni" class="max-w-7xl mx-auto p-6">
+  <div class=" bg-white rounded-lg border mb-8 p-4 flex flex-col md:flex-row items-center md:items-start">
         <!-- Image Section -->
           <div class="w-full md:w-1/2">
             <img src="assets/feni.png" alt="Flood" class="w-full h-full object-cover rounded-lg">
@@ -128,14 +131,14 @@
         <!-- Modal Structure end -->
   </div>
  </div>
-  </section>
+</section>
 
-<!-- Section Three -->
-<section class="max-w-7xl mx-auto p-6">
+<!-- Section Quota-Movement -->
+<section id="add-money-quota" class="max-w-7xl mx-auto p-6">
   <div class=" bg-white rounded-lg border mb-8 p-4 flex flex-col md:flex-row items-center md:items-start">
     <!-- Image Section -->
       <div class="w-full md:w-1/2">
-        <img src="assets/noakhali.png" alt="Flood" class="w-full h-full object-cover rounded-lg">
+        <img src="assets/quota-protest.png" alt="Flood" class="w-full h-full object-cover rounded-lg">
    </div>
    <!-- Donation Amount Section -->
    <div class="w-full md:w-1/2 md:pl-6 flex flex-col justify-between mt-4 md:mt-0">
@@ -169,11 +172,21 @@
 </div>
 </div>
 </section>
+
+<section>
+  <div id="transaction-section" class="hidden">
+    <h2 class="text-2xl">Transaction History</h2>
+    <div class="transaction-container">
+
+    </div>
+  </div>
+</section>
 </main>
 
 <script src="javascript/utilities.js"></script>
 <script src="javascript/addmoney.js"></script>
 <script src="javascript/feni.js"></script>
 <script src="javascript/quota.js"></script>
+<script src="javascript/features.js"></script>
 </body>
 </html>
